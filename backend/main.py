@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers import auth, reports, sprints
@@ -6,10 +8,12 @@ from db import client
 app = FastAPI()
 
 # CORS configuration
+# CORS configuration
 origins = [
     "http://localhost:5173",
     "http://localhost:5137",
-    "https://calestelatypus-skid-jjscbk79d-technovexias-projects.vercel.app",
+    "https://tiny-platypus-skid.onrender.com",
+    "https://www.tiny-platypus-skid.onrender.com",
 ]
 
 app.add_middleware(

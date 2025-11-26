@@ -8,3 +8,6 @@ passlib[bcrypt]
 python-dotenv
 google-auth
 pydantic-settings
+requests
+python-multipart
+google-api-python-client

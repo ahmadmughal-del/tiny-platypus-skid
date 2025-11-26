@@ -1,3 +1,4 @@
+import os
 from google.oauth2 import id_token
 from google.auth.transport import requests
 from fastapi import Depends, HTTPException, status
@@ -31,7 +32,8 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
 def verify_google_token(token: str):
     try:
         # Specify the CLIENT_ID of the app that accesses the backend
-        idinfo = id_token.verify_oauth2_token(token, requests.Request(), "538423121772-ep63turp6eb1us77nctg11mp92bv3o8s.apps.googleusercontent.com")
+        client_id = os.environ.get("GOOGLE_CLIENT_ID")
+        idinfo = id_token.verify_oauth2_token(token, requests.Request(), audience=client_id)
         return idinfo
     except ValueError:
         # Invalid token
