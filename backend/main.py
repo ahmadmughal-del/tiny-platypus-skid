@@ -10,6 +10,7 @@ origins = [
     "http://localhost:5173",
     "http://localhost:5137",
     "https://calestelatypus-skid-jjscbk79d-technovexias-projects.vercel.app",
+    "https://tiny-platypus-skid.onrender.com",
     "https://www.tiny-platypus-skid.onrender.com",
 ]
 
