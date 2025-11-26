@@ -13,8 +13,6 @@ __pycache__/
 *.log
 
 # Environment variables
-.env
-.env.*
 
 # IDE specific
 .vscode/
@@ -23,3 +21,4 @@ __pycache__/
 # OS specific
 .DS_Store
 Thumbs.db
+config.bat
